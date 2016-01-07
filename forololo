@@ -1,3 +1,13 @@
+--
+-- Base de datos: `forololo`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentarios`
+--
+
 CREATE TABLE `comentarios` (
   `id_usuario` int(4) NOT NULL,
   `id_comentario` int(4) NOT NULL,
@@ -153,3 +163,9 @@ ALTER TABLE `post`
 ALTER TABLE `temas`
   ADD CONSTRAINT `temas_ibfk_1` FOREIGN KEY (`id_foro`) REFERENCES `foro` (`id_foro`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `temas_ibfk_2` FOREIGN KEY (`id_tema`) REFERENCES `post` (`id_tema`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `comentarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
