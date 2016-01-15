@@ -1,0 +1,14 @@
+INSERT INTO `forololo`.`usuarios` (`id_usuario`, `nombre`, `apellidos`, `email`, `contrasena`, `foto`) 
+VALUES (NULL, 'lolo', 'lopez', 'paco@paco.com', '123456', NULL); 
+
+INSERT INTO `forololo`.`foro` (`id_foro`, `id_usuario`, `nombre_foro`) 
+VALUES (NULL, '1', 'Tecnologia');
+
+INSERT INTO `forololo`.`temas` (`id_tema`, `id_foro`, `nombre_tema`, `descripcion`) 
+VALUES (NULL, '1', 'Telefonía', 'Noticias sobre telefonía movil.');
+
+INSERT INTO `forololo`.`post` (`id_post`, `id_tema`, `nombre_post`, `fecha_creacion`, `texto_post`) 
+VALUES (NULL, '1', 'BQ FHD5', '2016-01-15', 'Aqui os dejo un resumen acerca de este terminal con sus datos correspondientes y un pequeño video de muestra.');
+
+INSERT INTO `forololo`.`comentarios` (`id_comentario`, `id_usuario`, `id_post`, `texto_comen`) 
+VALUES (NULL, '1', '1', 'Gracias por el aporte!');
