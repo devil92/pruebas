@@ -7,7 +7,8 @@ CREATE TABLE `usuarios` (
   `apellidos` varchar(30) NOT NULL,
   `email` varchar(50) NOT NULL,
   `contrasena` varchar(64) NOT NULL,
-  `foto` BLOB 
+  `foto` BLOB,
+  `nickusuario`varchar(30) NOT NULL,  
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 CREATE TABLE `foro` (
